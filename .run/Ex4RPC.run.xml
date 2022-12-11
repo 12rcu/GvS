@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Ex4RPC" type="JetRunConfigurationType">
+    <option name="MAIN_CLASS_NAME" value="de.matthias.ChatServerKt" />
+    <module name="gvs.exercise4.main" />
+    <shortenClasspath name="NONE" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

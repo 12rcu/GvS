@@ -17,3 +17,12 @@ Main is within `PrimeFactorization.java`
 
 Main is within `Test.java`, this file also declares an inflated calculation time to demonstrate that multiple workers can
 work at the same time.
+
+## Exercise 3
+
+## Exercise 4
+
+This exercise is solved with kotlin.
+
+The Main is in the `ChatServer.kt`. It creates 2 coroutines for the clients for
+a busy wait for the msg's.
