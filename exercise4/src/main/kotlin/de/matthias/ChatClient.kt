@@ -2,7 +2,6 @@ package de.matthias
 
 import io.grpc.ManagedChannelBuilder
 import kotlinx.coroutines.delay
-import kotlin.concurrent.thread
 
 class ChatClient(
     host: String,
@@ -18,7 +17,10 @@ class ChatClient(
     suspend fun login(username: String) {
         println("[$username] Logging in ...")
         val data = stub.login(LoginRequest.newBuilder().setUsername(username).build())
-        //todo error handling
+        if(data.status == StatusCode.FAILED) {
+            println("[$username] Failed to login")
+            return
+        }
         session = data.sessionID
         this.username = username
 
