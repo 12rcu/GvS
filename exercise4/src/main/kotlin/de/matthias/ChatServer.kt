@@ -122,7 +122,7 @@ suspend fun main() = coroutineScope {
         val clientA = ChatClient("localhost", 5555)
         val clientB = ChatClient("localhost", 5555)
 
-        //launch them so the can block each other on the thread while waiting
+        //launch them, so they can block each other on the thread while waiting
         launch { clientA.login("UserA") }
         launch { clientB.login("UserB") }
 
@@ -133,7 +133,7 @@ suspend fun main() = coroutineScope {
         clientA.sendMsg("Hello client b")
         clientB.sendMsg("Hello client a")
 
-        delay(1000)     //wait a till msg's came through
+        delay(1000)     //wait a sec till msg's came through
 
         clientA.logout()
         clientB.logout()
