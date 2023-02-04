@@ -14,3 +14,4 @@ pluginManagement {
 }
 include("exercise5")
 include("exercise6")
+include("exercise7")
